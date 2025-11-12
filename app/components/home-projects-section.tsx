@@ -6,7 +6,6 @@ import codeImage from "@/public/images/code-image.png";
 import arrowIcon from "@/public/vectors/arrow-icon.svg";
 import Image from "next/image";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 
 export default function HomeProjectsSection() {
