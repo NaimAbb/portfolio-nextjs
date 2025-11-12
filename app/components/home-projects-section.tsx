@@ -44,7 +44,12 @@ export default function HomeProjectsSection() {
 
         <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-14">
           {Array.from({ length: 6 }).map((_, index) => (
-            <div key={index} className="group">
+            <a
+              href="https://google.com"
+              target="_blank"
+              key={index}
+              className="group"
+            >
               <div className="overflow-hidden">
                 <Image
                   src={codeImage}
@@ -61,7 +66,7 @@ export default function HomeProjectsSection() {
                 </span>
                 <Image src={arrowIcon} alt="" />
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
