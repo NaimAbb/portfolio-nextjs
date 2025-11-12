@@ -14,7 +14,7 @@ export default function Header() {
     <header
       className={`${
         isFixed
-          ? "fixed left-0 right-0 top-0 bg-[#1A1A1A] shadow-sm shadow-[#4FC3F7]"
+          ? "fixed left-0 right-0 top-0 bg-[#1A1A1A] shadow-sm shadow-[#4FC3F7] z-[2000]"
           : ""
       } text-white py-5`}
     >
