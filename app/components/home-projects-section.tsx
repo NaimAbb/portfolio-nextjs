@@ -20,7 +20,7 @@ export default function HomeProjectsSection() {
   return (
     <Section
       id="projects"
-      className="my-28"
+      className="mt-28"
       title="Projects"
       subtitle="Some of my Work"
     >

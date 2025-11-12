@@ -26,7 +26,7 @@ export default function Header() {
         </h1>
         <NavLink />
         <div className="gap-28 hidden md:flex">
-          <Button href="#home" styleButton="rounded-[9px] px-5 py-2">
+          <Button href="#contact" styleButton="rounded-[9px] px-5 py-2">
             Contact Me
           </Button>
           <button>
