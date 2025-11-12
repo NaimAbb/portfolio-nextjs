@@ -1,8 +1,8 @@
 const MAIN_NAVIGATION: string[] = [
   "Home",
   "About",
-  "Projects",
   "Services",
+  "Projects",
   "Resume",
 ];
 

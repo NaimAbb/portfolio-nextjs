@@ -1,9 +1,20 @@
+"use client";
+
 import Button from "@/components/button";
 import Section from "@/components/section";
+import { useCustomInView } from "@/hooks/use-custom-in-view";
 
 export default function HomeAboutSection() {
+  const ref = useCustomInView("about");
+
   return (
-    <Section id="about" title="About Me" subtitle="Get to know me" className="mt-28">
+    <Section
+      ref={ref}
+      id="about"
+      title="About Me"
+      subtitle="Get to know me"
+      className="mt-28"
+    >
       <div className="w-[800px] max-w-full mx-auto text-center space-y-5 mt-16 p-3 md:p-0">
         <p className="text-[#E1E1E1] text-[17px] font-medium leading-8">
           Hi there! I'm [Your Name], a data scientist specializing in data

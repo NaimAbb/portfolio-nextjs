@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import themeIcon from "@/public/vectors/theme-icon.svg";
-import menuIcon from "@/public/vectors/menu-icon.svg";
 import Image from "next/image";
 import NavLink from "./navlink";
 import Button from "./button";

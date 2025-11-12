@@ -1,10 +1,19 @@
+"use client";
+
 import Button from "@/components/button";
+import { useCustomInView } from "@/hooks/use-custom-in-view";
 import avatar from "@/public/images/my-picture.jpeg";
 import Image from "next/image";
 
 export default function HomeHeroSection() {
+  const ref = useCustomInView("home");
+
   return (
-    <section className="bg-[url(@/public/vectors/hero-background.svg)] bg-no-repeat bg-center min-h-[calc(100vh-88px)] text-white flex flex-col items-center justify-center text-center">
+    <section
+      id="home"
+      ref={ref}
+      className="bg-[url(@/public/vectors/hero-background.svg)] bg-no-repeat bg-center min-h-[calc(100vh-88px)] text-white flex flex-col items-center justify-center text-center"
+    >
       <div className="flex flex-col gap-5 items-center w-[800px] max-w-full">
         <Image
           src={avatar}

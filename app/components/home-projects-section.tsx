@@ -2,6 +2,7 @@
 
 import Section from "@/components/section";
 import { CATEGORIES } from "@/data";
+import { useCustomInView } from "@/hooks/use-custom-in-view";
 import codeImage from "@/public/images/code-image.png";
 import arrowIcon from "@/public/vectors/arrow-icon.svg";
 import Image from "next/image";
@@ -9,6 +10,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 export default function HomeProjectsSection() {
+  const ref = useCustomInView("projects");
   const [selectedCategory, setSelectedCategory] = useState<string>(
     CATEGORIES[0]
   );
@@ -19,6 +21,7 @@ export default function HomeProjectsSection() {
 
   return (
     <Section
+      ref={ref}
       id="projects"
       className="mt-28"
       title="Projects"

@@ -86,7 +86,7 @@ const MobileNavLinks: React.FC = () => {
           >
             <motion.div
               onClick={handleOnClickInside}
-              className="ml-auto h-full w-1/2 bg-[#1A1A1A] px-5 py-5"
+              className="ml-auto h-full w-8/12 bg-[#1A1A1A] px-5 py-5"
               variants={sidebarVariants}
               initial="hidden"
               animate="visible"
