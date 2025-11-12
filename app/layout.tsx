@@ -4,6 +4,7 @@ import { Oleo_Script } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import ButtonUp from "@/components/button-up";
+import Footer from "@/components/footer";
 
 const myCustomFont = localFont({
   src: [
@@ -64,6 +65,7 @@ export default function RootLayout({
         <ButtonUp />
         <Header />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
