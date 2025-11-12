@@ -28,7 +28,7 @@ const Input: React.FC<InputProps> = forwardRef(function (
         ref={ref}
         id={id}
         name={id}
-        type={type}
+        type={isTextArea ? undefined : type}
         className={`border border-[#D6DDED] rounded-[10px] text-white ${
           isTextArea ? "h-[222px] resize-none py-4" : "h-[70px]"
         } outline-none w-full bg-transparent px-4 caret-white placeholder:text-[#8987A1] placeholder:font-normal placeholder:text-lg`}
