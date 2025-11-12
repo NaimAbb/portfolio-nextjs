@@ -4,7 +4,7 @@ import Image from "next/image";
 import { MAIN_NAVIGATION } from "@/data";
 import Link from "./link";
 import { MdClose } from "react-icons/md";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 
 const MobileNavLinks: React.FC = () => {
   const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false);
@@ -28,17 +28,17 @@ const MobileNavLinks: React.FC = () => {
   };
 
   // Animations
-  const overlayVariants = {
+  const overlayVariants: Variants = {
     hidden: { opacity: 0 },
     visible: { opacity: 1 },
   };
 
-  const sidebarVariants = {
+  const sidebarVariants: Variants = {
     hidden: { x: "100%" },
     visible: {
       x: 0,
       transition: {
-        type: "spring",
+        type: "spring", // literal, not generic string
         damping: 25,
         stiffness: 200,
       },
@@ -53,14 +53,17 @@ const MobileNavLinks: React.FC = () => {
     },
   };
 
-  const menuItemVariants = {
+  const menuItemVariants: Variants = {
     hidden: { opacity: 0, x: 20 },
     visible: (i: number) => ({
       opacity: 1,
       x: 0,
       transition: {
+        // spring is fine here too; keep it duration-less
+        type: "spring",
+        damping: 20,
+        stiffness: 300,
         delay: i * 0.1 + 0.2,
-        duration: 0.3,
       },
     }),
   };
