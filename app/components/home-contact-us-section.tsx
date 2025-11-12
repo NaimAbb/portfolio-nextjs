@@ -2,7 +2,7 @@
 
 import Input from "@/components/input";
 import Section from "@/components/section";
-import React, { useState } from "react";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "@/lib/firebase";
@@ -129,7 +129,7 @@ export default function HomeContactUsSection() {
               </p>
             )}
           </div>
-          
+
           {submitStatus === "error" && (
             <div className="bg-red-500 text-white p-4 rounded-[10px] text-center">
               Failed to send message. Please try again.
