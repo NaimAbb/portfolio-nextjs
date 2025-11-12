@@ -4,7 +4,6 @@ import Section from "@/components/section";
 import { useCustomInView } from "@/hooks/use-custom-in-view";
 import sunIcon from "@/public/vectors/sun-icon.svg";
 import Image from "next/image";
-
 export default function HomeServicesSection() {
   const ref = useCustomInView("services");
 
