@@ -7,3 +7,17 @@
     @apply scroll-smooth;
   }
 }
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4fc3f7;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4fc3f7 #f1f1f1;
+}
