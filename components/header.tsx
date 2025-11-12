@@ -7,6 +7,7 @@ import Image from "next/image";
 import NavLink from "./navlink";
 import Button from "./button";
 import { useCustomScroll } from "@/hooks/use-custom-scroll";
+import MobileNavLinks from "./mobile-navlinks";
 
 export default function Header() {
   const isFixed = useCustomScroll(300);
@@ -33,9 +34,7 @@ export default function Header() {
             <Image src={themeIcon} alt="Theme Icon" />
           </button>
         </div>
-        <button className="md:hidden">
-          <Image src={menuIcon} alt="" />
-        </button>
+        <MobileNavLinks />
       </div>
     </header>
   );
