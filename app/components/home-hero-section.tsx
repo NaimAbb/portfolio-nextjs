@@ -26,7 +26,7 @@ export default function HomeHeroSection() {
           complex data landscapes and uncovering meaningful patterns that drive
           innovation
         </p>
-        <Button href="#home" styleButton="rounded-[75px] px-16 py-[10px]">
+        <Button href="#contact" styleButton="rounded-[75px] px-16 py-[10px]">
           Contact Me
         </Button>
       </div>
