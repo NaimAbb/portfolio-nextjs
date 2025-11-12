@@ -14,8 +14,6 @@ export default function HomeProjectsSection() {
     CATEGORIES[0]
   );
 
-  const g = useSearchParams();
-
   function handleOnClick(item: string) {
     setSelectedCategory(item);
   }
