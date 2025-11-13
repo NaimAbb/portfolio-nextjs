@@ -1,3 +1,4 @@
+import { handleClickDwonlaodCV } from "@/util/helpers";
 import { useSelector } from "react-redux";
 
 interface LinkProps {
@@ -16,9 +17,13 @@ export default function Link({ title, onClick }: LinkProps) {
       } text-lg font-semibold`}
     >
       <a
-        onClick={() => {
+        onClick={(event) => {
           if (onClick) {
             onClick();
+          }
+          if (title === "Resume") {
+            event.preventDefault();
+            handleClickDwonlaodCV();
           }
         }}
         href={`#${title.toLowerCase()}`}

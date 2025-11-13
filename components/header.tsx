@@ -1,8 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import themeIcon from "@/public/vectors/theme-icon.svg";
-import Image from "next/image";
 import NavLink from "./navlink";
 import Button from "./button";
 import { useCustomScroll } from "@/hooks/use-custom-scroll";
@@ -29,9 +27,9 @@ export default function Header() {
           <Button href="#contact" styleButton="rounded-[9px] px-5 py-2">
             Contact Me
           </Button>
-          <button>
+          {/* <button>
             <Image src={themeIcon} alt="Theme Icon" />
-          </button>
+          </button> */}
         </div>
         <MobileNavLinks />
       </div>

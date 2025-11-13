@@ -3,6 +3,8 @@
 import Button from "@/components/button";
 import Section from "@/components/section";
 import { useCustomInView } from "@/hooks/use-custom-in-view";
+import { handleClickDwonlaodCV } from "@/util/helpers";
+
 
 export default function HomeAboutSection() {
   const ref = useCustomInView("about");
@@ -34,7 +36,11 @@ export default function HomeAboutSection() {
           that drive real results. Get in touch, and let's start unlocking the
           power of your data today!
         </p>
-        <Button tag="button" styleButton="rounded-[50px] px-12 py-[14px]">
+        <Button
+          onClick={handleClickDwonlaodCV}
+          tag="button"
+          styleButton="rounded-[50px] px-12 py-[14px]"
+        >
           Download Resume
         </Button>
       </div>

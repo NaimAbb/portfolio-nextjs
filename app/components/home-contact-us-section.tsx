@@ -4,15 +4,24 @@ import Input from "@/components/input";
 import Section from "@/components/section";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import { db } from "@/lib/firebase";
-import { showToast } from "nextjs-toast-notify";
+import { contactUs, showSuccessToast } from "@/services/app";
 
-type FormData = {
+export type FormData = {
   name: string;
   email: string;
   message: string;
+  service: string;
 };
+
+const services = [
+  { value: "", label: "Select a service" },
+  { value: "web-development", label: "Web Development" },
+  { value: "mobile-development", label: "Mobile Development" },
+  { value: "ui-ux-design", label: "UI/UX Design" },
+  { value: "consulting", label: "Consulting" },
+  { value: "seo", label: "SEO Services" },
+  { value: "other", label: "Other" },
+];
 
 export default function HomeContactUsSection() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -32,27 +41,13 @@ export default function HomeContactUsSection() {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     setSubmitStatus(null);
-
     try {
-      await addDoc(collection(db, "contacts"), {
-        name: data.name,
-        email: data.email,
-        message: data.message,
-        createdAt: serverTimestamp(),
-      });
-
+      await contactUs(data);
       setSubmitStatus("success");
       reset();
-      showToast.success(
-        "Message sent successfully! We'll get back to you soon.",
-        {
-          duration: 5000,
-          progress: true,
-          position: "top-right",
-          transition: "bounceIn",
-          icon: '<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check"><path d="M20 6 9 17l-5-5"/></svg>',
-          sound: true,
-        }
+
+      showSuccessToast(
+        "Message sent successfully! We'll get back to you soon."
       );
     } catch (error) {
       console.error("Error adding document: ", error);
@@ -106,6 +101,42 @@ export default function HomeContactUsSection() {
             {errors.email && (
               <p className="text-red-500 text-sm mt-1">
                 {errors.email.message}
+              </p>
+            )}
+          </div>
+          <div>
+            <label
+              htmlFor="service"
+              className="block text-white font-bold text-lg mb-[12px]"
+            >
+              Service
+            </label>
+            <div className="relative">
+              <select
+                id="service"
+                defaultValue=""
+                className={`border border-[#D6DDED] appearance-none rounded-[10px] text-white h-[70px] outline-none w-full bg-transparent px-4 caret-white placeholder:text-[#8987A1] placeholder:font-normal placeholder:text-lg`}
+                {...register("service", {
+                  required: "Please select a service",
+                  validate: (value) =>
+                    value !== "" || "Please select a valid service",
+                })}
+              >
+                {services.map((service) => (
+                  <option
+                    key={service.value}
+                    value={service.value}
+                    disabled={service.value === ""}
+                  >
+                    {service.label}
+                  </option>
+                ))}
+              </select>
+              <div className="absolute top-1/2 right-5  h-0 w-0 border-[6px] border-t-white border-l-transparent border-r-transparent border-b-transparent" />
+            </div>
+            {errors.service && (
+              <p className="text-red-500 text-sm mt-1">
+                {errors.service.message}
               </p>
             )}
           </div>
