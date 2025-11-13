@@ -12,7 +12,7 @@ export default function HomeHeroSection() {
     <section
       id="home"
       ref={ref}
-      className="bg-[url(@/public/vectors/hero-background.svg)] bg-no-repeat bg-center min-h-[calc(100vh-88px)] text-white flex flex-col items-center justify-center text-center"
+      className="bg-[url(@/public/vectors/hero-background.svg)] bg-no-repeat bg-center min-h-[calc(100vh-88px)] text-white flex flex-col items-center justify-center text-center pt-7"
     >
       <div className="flex flex-col gap-5 items-center w-[800px] max-w-full">
         <Image
