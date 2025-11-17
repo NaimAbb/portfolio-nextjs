@@ -12,10 +12,23 @@ module.exports = {
         montserrat: ["var(--font-custom)"],
         oleoScript: ["var(--oleo-script-font)"],
       },
+      animation: {
+        slider: "slider 0.7s infinite",
+      },
+      keyframes: {
+        slider: {
+          from: {
+            transform: "translateX(-5px)",
+          },
+          to: {
+            transform: "translateX(5px)",
+          },
+        },
+      },
       container: {
         center: true,
-        padding: "1rem"
-      }
+        padding: "1rem",
+      },
     },
   },
   plugins: [],
