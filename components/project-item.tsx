@@ -2,16 +2,39 @@ import { Project } from "@/models/project";
 import Image from "next/image";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import codeImage from "@/public/images/code-image.png";
+import { motion } from "framer-motion";
 
 interface ProjectItemProps {
   project: Project;
+  index: number;
 }
 
-export default function ProjectItem({ project }: ProjectItemProps) {
+export default function ProjectItem({ project, index }: ProjectItemProps) {
   const { image, title, description, link } = project;
   const projectImage = image || codeImage;
   return (
-    <a href={link} target="_blank" className="group">
+    <motion.a
+      initial={{
+        opacity: 0,
+        y: 20,
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+      }}
+      viewport={{
+        once: true,
+        margin: "-50px",
+      }}
+      transition={{
+        delay: index * 0.1,
+        duration: 0.6,
+        ease: "easeOut",
+      }}
+      href={link}
+      target="_blank"
+      className="group"
+    >
       <div className="overflow-hidden rounded-xl">
         <Image
           src={projectImage}
@@ -32,6 +55,6 @@ export default function ProjectItem({ project }: ProjectItemProps) {
           />
         </div>
       </div>
-    </a>
+    </motion.a>
   );
 }

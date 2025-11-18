@@ -4,7 +4,8 @@ import Input from "@/components/input";
 import Section from "@/components/section";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { contactUs, showSuccessToast } from "@/services/app";
+import { contactUs } from "@/services/app";
+import { showSuccessToast } from "@/util/helpers";
 
 export type FormData = {
   name: string;

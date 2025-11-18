@@ -46,7 +46,11 @@ export default function HomeProjectsSection() {
 
         <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-14">
           {selectedCategory.projects.map((item, index) => (
-            <ProjectItem key={index} project={item} />
+            <ProjectItem
+              key={`${selectedCategory.title}-${index}`}
+              project={item}
+              index={index}
+            />
           ))}
         </div>
 
