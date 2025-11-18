@@ -5,6 +5,7 @@ import HomeHeroSection from "./components/home-hero-section";
 import HomeProjectsSection from "./components/home-projects-section";
 import HomeServicesSection from "./components/home-services-section";
 import gmailIcon from "@/public/vectors/gmail-icon.svg";
+
 export default function Home() {
   return (
     <>
@@ -24,7 +25,7 @@ export default function Home() {
           href="mailto:naim.abbud@gmail.com"
           className="flex flex-col lg:flex-row items-center text-[16px] lg:text-[22px] gap-3 text-[#C9C9C9] font-normal border border-[#484E53] rounded-2xl px-8 py-3 max-w-full"
         >
-          <Image src={gmailIcon} alt="d" />
+          <Image src={gmailIcon} alt="Gmail Icon" />
           naim.abbud@gmail.com
         </a>
       </section>
