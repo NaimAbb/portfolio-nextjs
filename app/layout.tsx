@@ -6,6 +6,7 @@ import Header from "@/components/header";
 import ButtonUp from "@/components/button-up";
 import Footer from "@/components/footer";
 import StoreProvider from "@/components/providers/store-provider";
+import ChatWidget from "./components/chat-widget";
 
 const myCustomFont = localFont({
   src: [
@@ -64,10 +65,11 @@ export default function RootLayout({
         className={`${myCustomFont.variable} ${oleoScriptFont.variable} bg-[#1A1A1A] font-montserrat`}
       >
         <StoreProvider>
-          <ButtonUp />
+          {/* <ButtonUp /> */}
           <Header />
           <main>{children}</main>
           <Footer />
+          <ChatWidget />
         </StoreProvider>
       </body>
     </html>

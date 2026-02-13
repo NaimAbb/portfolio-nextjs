@@ -15,53 +15,59 @@ const CATEGORIES = [
     new Project(
       jaddahImage,
       "Historic Jeddah",
-      "Mobile App/Flutter",
+      "Mobile App",
       "https://play.google.com/store/apps/details?id=sa.ay.jhd"
     ),
     new Project(
       null,
       "SimSim",
-      "Mobile App/Flutter",
+      "Mobile App",
       "https://play.google.com/store/apps/details?id=com.simsim.android"
     ),
     new Project(
       null,
       "Foz",
-      "Mobile App/Flutter",
+      "Mobile App",
       "https://play.google.com/store/search?q=foz&c=apps"
     ),
     new Project(
       null,
       "Jawhar",
-      "Mobile App/Flutter",
+      "Mobile App",
       "https://play.google.com/store/apps/details?id=com.hexa.jawharstores"
     ),
     new Project(
       null,
       "Zelter",
-      "Mobile App/Flutter",
+      "Mobile App",
       "https://play.google.com/store/apps/details?id=com.zelter.app"
     ),
     new Project(
       null,
       "World Mall",
-      "Mobile App/Flutter",
+      "Mobile App",
       "https://play.google.com/store/apps/details?id=com.app.world.ma"
     ),
     new Project(
       null,
       "Water",
-      "Mobile App/Flutter",
+      "Mobile App",
       "https://play.google.com/store/apps/details?id=com.waterq.app"
     ),
     new Project(null, "SkipperFly", "Mobile App/Flutter", "/"),
   ]),
   new Category("Web Apps", [
     new Project(
-      null,
+      jaddahImage,
       "Historic Jeddah",
-      "Mobile App/Flutter",
-      "https://google.com"
+      "React/Nextjs",
+      "https://www.visitalbalad.com/"
+    ),
+    new Project(
+      null,
+      "Forever",
+      "React/Nextjs",
+      "https://foreverbuy.in"
     ),
   ]),
 ];

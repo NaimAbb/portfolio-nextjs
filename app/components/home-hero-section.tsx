@@ -46,13 +46,7 @@ export default function HomeHeroSection() {
           🧙‍♂️
         </p>
         <p className="text-base md:text-[19px] font-medium leading-8">
-          As a passionate Front-End Developer with 5 years of experience, I
-          specialize in building fast, user-friendly web applications using
-          React, Next.js, TypeScript, Redux Toolkit, React Query, and Tailwind
-          CSS. After several years of crafting mobile experiences with Flutter,
-          I’ve transitioned to modern web development, focusing on creating
-          responsive, high-performance interfaces that feel smooth, intuitive,
-          and delightful to use.
+          Front-End Developer with 5 years of experience building fast, user-friendly web applications using React, Next.js, TypeScript, Redux Toolkit, React Query, and Tailwind CSS. I focus on creating responsive, high-performance interfaces that are smooth, intuitive, and built for real-world users.
         </p>
         <Button href="#contact" styleButton="rounded-[75px] px-16 py-[10px]">
           Contact Me
